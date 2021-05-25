@@ -2,7 +2,14 @@ from turtle import Turtle, Screen
 import random
 is_race_on = False
 screen = Screen()
-screen.setup(width=750, height=400)
+screen.setup(width=800, height=400)
+finish_line = Turtle()
+finish_line.shape("square")
+finish_line.color("red")
+finish_line.shapesize(stretch_wid=15, stretch_len=0.1)
+finish_line.penup()
+finish_line.goto(350, 20)
+finish_line.write("  FINISH")
 user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Choose a color: \n "
                                                           "red/orange/yellow/green/blue/purple/pink/brown")
 colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"]
